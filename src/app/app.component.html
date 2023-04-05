@@ -1,0 +1,16 @@
+<app-top-bar></app-top-bar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<hr />
+<h2>filter Date: {{ filterValue | date: 'dd/MM/yyyy' }}</h2>
+<div *ngFor="let data of datas | filterDeal: filterValue">
+  <p>{{ data.jurName }} - {{ data.date }}</p>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
